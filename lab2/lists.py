@@ -1,186 +1,477 @@
 """
-Python supports the usual logical conditions from mathematics:
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+"""
 
-Equals: a == b
-Not Equals: a != b
-Less than: a < b
-Less than or equal to: a <= b
-Greater than: a > b
-Greater than or equal to: a >= b
+"""
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+"""
+
+"""
+list1 = ["abc", 34, True, 40, "male"]
+"""
+
+"""
+mylist = ["apple", "banana", "cherry"]
+print(type(mylist))
+"""
+
+"""
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist)
+"""
+
+"""
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+"""
+
+"""
+thislist = ["apple", "banana", "cherry"]
+print(thislist[-1])
+"""
+
+"""
+Return the third, fourth, and fifth item:
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+"""
+
+"""
+"This example returns the items from the beginning to, but NOT including, "kiwi" "
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4])
+"""
+
+"""
+This example returns the items from "cherry" to the end:
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+"""
+
+"""
+This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+"""
+
+"""
+Check if "apple" is present in the list:
+
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+    print("Yes, 'apple' is in the fruits list")
 
 """
 
 """
-If statement:
-
-a = 33
-b = 200
-if b > a:
-    print("b is greater than a")
-
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
 """
 
 """
-a = 33
-b = 33
-if b > a:
-    print("b is greater than a")
-elif a == b:
-    print("a and b are equal")
-
-"""
-
-"""
-a = 200
-b = 33
-if b > a:
-    print("b is greater than a")
-else:
-    print("b is not greater than a")
-
-"""
-
-"""
-One line if statement:
-
-    if a > b: print("a is greater than b")
-
-"""
-
-"""
-One line if else statement:
-
-a = 2
-b = 330
-print("A") if a > b else print("B")
-
-"""
-
-"""
-Test if a is greater than b, AND if c is greater than a:
-
-a = 200
-b = 33
-c = 500
-if a > b and c > a:
-    print("Both conditions are True")
-
-"""
-
-"""
-Test if a is greater than b, OR if a is greater than c:
-
-a = 200
-b = 33
-c = 500
-if a > b or a > c:
-    print("At least one of the conditions is True")
-
-"""
-
-"""
-Test if a is NOT greater than b:
-
-a = 33
-b = 200
-if not a > b:
-    print("a is NOT greater than b")
-
-"""
-
-"""
-x = 41
-
-if x > 10:
-    print("Above ten,")
-    if x > 20:
-        print("and also above 20!")
-    else:
-        print("but not above 20.")
-
-"""
-
-"""
-a = 33
-b = 200
-
-if b > a:
-    pass
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
     
 """
 
 """
-    Exercise:
+Using the append() method to append an item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
 
 """
 
 """
-a = 50
-b = 10
-if a > b:
-    print("Hello World")
+Using the append() method to append an item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
 
 """
 
 """
-a = 50
-b = 10
-if a != b:
-    print("Hello World")
+Insert an item as the second position:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+
 
 """
 
 """
-a = 50
-b = 10
-if a == b:
-    print("Yes")
-else:
-    print("No")
+Add the elements of tropical to thislist:
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist) 
 
 """
 
 """
-a = 50
-b = 10
-if a == b:
-    print("1")
-elif a > b:
-    print("2")
-else:
-    print("3")
+Add elements of a tuple to a list:
+
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+"""
+
+"""
+Remove "banana":
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
 
 """
 
 """
-if a == b and c == d:
-    print("Hello")
+Remove the first occurance of "banana":
+
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
 
 """
 
 """
-if a == b or c == d:
-    print("Hello")
+Remove the second item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+"""
+
+"""
+Remove the last item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+"""
+
+"""
+Remove the first item:
+
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
 
 """
 
 """
-if 5 > 2:
-    print("YES")
+Delete the entire list:
+
+thislist = ["apple", "banana", "cherry"]
+del thislist
+"""
+
+"""
+Clear the list content:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+"""
+
+"""
+Print all items in the list, one by one:
+
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+"""
+
+"""
+Print all items, using a while loop to go through all the index numbers
+
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+"""
+
+"""
+A short hand for loop that will print all items in a list:
+
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+"""
+
+"""
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
 
 """
 
 """
-a = 2
-b = 5
-print("YES") if a == b else   print("NO")
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+"""
+
+"""
+Only accept items that are not "apple":
+
+newlist = [x for x in fruits if x != "apple"]
+"""
+
+"""
+With no if statement:
+
+newlist = [x for x in fruits]
+"""
+
+"""
+You can use the range() function to create an iterable
+newlist = [x for x in range(10)]
+"""
+
+"""
+Accept only numbers lower than 5:
+
+newlist = [x for x in range(10) if x < 5]
+"""
+
+"""
+Set the values in the new list to upper case:
+
+newlist = [x.upper() for x in fruits]
+"""
+
+"""
+Set all values in the new list to 'hello':
+
+newlist = ['hello' for x in fruits]
+"""
+
+"""
+Return "orange" instead of "banana":
+
+newlist = [x if x != "banana" else "orange" for x in fruits]
+"""
+
+"""
+Sort the list alphabetically:
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+"""
+
+"""
+Sort the list numerically:
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+"""
+
+"""
+Sort the list descending:
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+"""
+
+"""
+Sort the list descending:
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(reverse = True)
+print(thislist)
+"""
+
+"""
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+"""
+
+"""
+Case sensitive sorting can give an unexpected result:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist)
+"""
+
+"""
+Perform a case-insensitive sort of the list:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+"""
+
+"""
+Reverse the order of the list items:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+"""
+
+"""
+Make a copy of a list with the copy() method:
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+"""
+
+"""
+Make a copy of a list with the list() method:
+
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+"""
+
+"""
+Join two list:
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
+"""
+
+"""
+Append list2 into list1:
+
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
+"""
+
+"""
+Use the extend() method to add list2 at the end of list1:
+
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1)
+"""
+
+"""
+Python has a set of built-in methods that you can use on lists.
+
+Method	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+"""
+
+"""
+
+  Exercise:
 
 """
 
 """
-a = 2
-b = 50
-c = 2
-if a == c or b == c:
-    print("YES")
+Print the second item in the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+print(fruits[1])
+"""
+
+"""
+Change the value from "apple" to "kiwi", in the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits[0] = "kiwi"
+
+"""
+
+"""
+Use the append method to add "orange" to the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+"""
+
+"""
+Use the insert method to add "lemon" as the second item in the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits.insert(1, "lemon")
+"""
+
+"""
+Use the remove method to remove "banana" from the fruits list.
+
+
+fruits = ["apple", "banana", "cherry"]
+fruits.remove("banana")
+
+"""
+
+"""
+Use negative indexing to print the last item in the list.
+
+
+fruits = ["apple", "banana", "cherry"]
+print(fruits[-1])
+"""
+
+"""
+Use a range of indexes to print the third, fourth, and fifth item in the list.
+
+
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(fruits[2:5])
+"""
+
+"""
+Use the correct syntax to print the number of items in the list.
+
+
+fruits = ["apple", "banana", "cherry"]
+print(len(fruits))
 """
