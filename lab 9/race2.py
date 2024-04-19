@@ -25,21 +25,16 @@ game_over = font.render("Game Over", True, BLACK)
 
 background = pygame.image.load("AnimatedStreet.png")
 
-# Create a white screen
 DISPLAYSURF = pygame.display.set_mode((400, 600))
 DISPLAYSURF.fill(WHITE)
 pygame.display.set_caption("Game")
 
-
-# Create a sprite group Enemy
 class Enemy(pygame.sprite.Sprite):
-    # constructor
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load("Enemy.png")
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
-    # move method
     def move(self):
         global SCORE
         self.rect.move_ip(0, SPEED)
@@ -48,15 +43,13 @@ class Enemy(pygame.sprite.Sprite):
             self.rect.top = 0
             self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
 
-# Create a sprite group Player
 class Player(pygame.sprite.Sprite):
-    # constructor
+  
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load("car.png")
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
-    # move method
     def move(self):
         pressed_keys = pygame.key.get_pressed()
         if self.rect.left > 0:
@@ -66,9 +59,7 @@ class Player(pygame.sprite.Sprite):
             if pressed_keys[K_RIGHT]:
                 self.rect.move_ip(5, 0)
 
-# Create a sprite group Coin
 class Coin(pygame.sprite.Sprite):
-    # constructor
     def __init__(self):
         super().__init__()
         self.image = pygame.image.load("coin.png")
@@ -93,13 +84,11 @@ class BigCoin(pygame.sprite.Sprite):
     def move(self):
         self.rect.move_ip(0, SPEED)
 
-# Setting up Sprites
 P1 = Player()
 E1 = Enemy()
 C1 = Coin()
 B1 = BigCoin()
 
-# Creating Sprites Groups
 enemies = pygame.sprite.Group()
 enemies.add(E1)
 
@@ -111,7 +100,7 @@ big_coins.add(B1)
 
 all_sprites = pygame.sprite.Group()
 all_sprites.add(P1, C1, B1, E1)
-# Adding a new User event
+
 INC_SPEED = pygame.USEREVENT + 1
 pygame.time.set_timer(INC_SPEED, 1000)
 
@@ -129,8 +118,6 @@ while True:
 
     counter = font_small.render(str(coin2), True, BLACK)
     DISPLAYSURF.blit(counter, (380, 10))
-
-    # Check for collision with coins
     collided_coins = pygame.sprite.spritecollide(P1, coins, True)
     for coin in collided_coins:
         coin2 += 1
@@ -151,12 +138,11 @@ while True:
         coin2 += 5
         big_coin.kill()
 
-    # Moves and Re-draws all Sprites
+   
     for entity in all_sprites:
         DISPLAYSURF.blit(entity.image, entity.rect)
         entity.move()
 
-    # To be run if collision occurs between Player and Enemy
     if pygame.sprite.spritecollideany(P1, enemies):
         time.sleep(0.5)
 
